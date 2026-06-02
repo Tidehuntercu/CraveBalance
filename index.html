@@ -1,0 +1,2048 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crave Balance · Meal Prep Miami</title>
+  <meta name="description" content="Meal prep alto en proteína, hecho con ingredientes frescos y entregado en Miami cada semana. Comidas balanceadas hechas para tus metas." />
+  <meta property="og:title" content="Crave Balance · Meal Prep Miami" />
+  <meta property="og:description" content="Meal prep alto en proteína, hecho con ingredientes frescos y entregado en Miami cada semana." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Crave Balance · Meal Prep Miami" />
+  <meta name="twitter:description" content="Meal prep alto en proteína, hecho con ingredientes frescos y entregado en Miami cada semana." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue:        #5d82a8;   /* brand steel blue — matches logo ring */
+      --blue-dark:   #2d4d72;   /* dark blue for headings & buttons     */
+      --blue-deep:   #1d3354;   /* very dark blue for footer / CTA bg   */
+      --blue-light:  #7a9bbf;   /* lighter — logo leaves                */
+      --blue-pale:   #e8eef5;   /* pale blue for hover / chip bg        */
+      --blue-ultra:  #f2f6fa;   /* ultra-light section bg               */
+      --gold:        #c9a96e;   /* brand gold — lion, BY MELS, accents  */
+      --gold-light:  #d4b87e;
+      --gold-pale:   #f5ead5;
+      --gold-ultra:  #fdf8ef;
+      --cream:       #f8f5ef;
+      --dark:        #1a1a2e;
+      --mid:         #4a5068;
+      --soft:        #8a8aa8;
+      --border:      #e4ddd0;
+      --white:       #ffffff;
+      --wa:          #25d366;
+      --radius:      14px;
+      --shadow:      0 4px 24px rgba(0,0,0,0.07);
+      --shadow-lg:   0 12px 48px rgba(0,0,0,0.12);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── BRAND DIVIDER ── */
+    .brand-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin: 0 auto 40px;
+      max-width: 280px;
+    }
+    .brand-divider::before,
+    .brand-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--blue-light));
+    }
+    .brand-divider::after {
+      background: linear-gradient(to left, transparent, var(--blue-light));
+    }
+    .brand-divider-heart {
+      color: var(--blue);
+      font-size: 13px;
+      line-height: 1;
+    }
+
+    /* ── LOGO BADGE (CSS placeholder — swap for <img> when ready) ── */
+    /* Logo image sizing — replaces the old CSS badge */
+    .logo-img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+    .logo-img-sm {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    /* ── IMAGE PLACEHOLDERS ── */
+    .img-placeholder {
+      width: 100%;
+      background: var(--gold-pale);
+      border: 2px dashed var(--gold-light);
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: var(--gold);
+    }
+    .img-placeholder-icon { font-size: 40px; }
+    .img-placeholder-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--soft);
+      letter-spacing: 0.03em;
+    }
+
+    .gallery-img-placeholder {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: var(--gold-pale);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .gallery-img-placeholder span { font-size: 30px; }
+    .gallery-img-placeholder small {
+      font-size: 11px;
+      color: var(--soft);
+      font-weight: 500;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(248,245,239,0.95);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      gap: 16px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .nav-logo-text { display: flex; flex-direction: column; line-height: 1.15; }
+    .nav-logo-text strong { font-size: 15px; font-weight: 700; color: var(--blue-dark); }
+    .nav-logo-text span { font-size: 10px; color: var(--blue); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+    .nav-links {
+      display: flex;
+      gap: 2px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-size: 13.5px;
+      color: var(--mid);
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: background .2s, color .2s;
+      font-weight: 500;
+    }
+    .nav-links a:hover { background: var(--gold-pale); color: var(--blue-dark); }
+    .nav-right { display: flex; align-items: center; gap: 10px; }
+    .lang-toggle {
+      display: flex;
+      background: var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .lang-toggle button {
+      border: none;
+      background: transparent;
+      padding: 5px 10px;
+      cursor: pointer;
+      color: var(--soft);
+      transition: background .2s, color .2s;
+    }
+    .lang-toggle button.active { background: var(--blue-dark); color: #fff; }
+    .btn-nav {
+      background: var(--blue-dark);
+      color: #fff;
+      border: none;
+      padding: 9px 18px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background .2s, transform .15s;
+    }
+    .btn-nav:hover { background: var(--blue); transform: translateY(-1px); }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--blue-dark);
+      border-radius: 2px;
+      transition: transform .3s;
+    }
+
+    /* ── HERO ── */
+    #top {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 24px 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 52px;
+      align-items: center;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--blue-pale);
+      color: var(--blue-dark);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      border: 1px solid var(--blue-light);
+      letter-spacing: 0.04em;
+    }
+    .hero-badge::before { content: '📍'; font-size: 12px; }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 5vw, 56px);
+      line-height: 1.1;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--blue-dark);
+      text-transform: uppercase;
+    }
+    .hero-title em {
+      font-style: italic;
+      color: var(--gold);
+      text-transform: none;
+    }
+    .hero-script {
+      display: block;
+      font-family: 'Dancing Script', cursive;
+      font-size: clamp(22px, 3vw, 30px);
+      color: var(--gold);
+      margin-bottom: 22px;
+      font-weight: 600;
+    }
+    .hero-sub {
+      font-size: 15.5px;
+      color: var(--mid);
+      line-height: 1.75;
+      margin-bottom: 32px;
+      max-width: 460px;
+    }
+    .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--blue-dark);
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 26px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 15px;
+      transition: background .2s, transform .15s, box-shadow .2s;
+      box-shadow: 0 4px 18px rgba(45,77,114,0.28);
+    }
+    .btn-primary:hover { background: var(--blue); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(45,77,114,0.35); }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--blue-dark);
+      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 15px;
+      border: 2px solid var(--gold);
+      transition: background .2s, border-color .2s;
+    }
+    .btn-secondary:hover { background: var(--gold-ultra); border-color: var(--gold-light); }
+    .hero-chips {
+      display: flex;
+      gap: 10px;
+      margin-top: 28px;
+      flex-wrap: wrap;
+    }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      padding: 7px 14px;
+      border-radius: 20px;
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--mid);
+      box-shadow: var(--shadow);
+    }
+    .chip strong { color: var(--blue); font-weight: 700; }
+
+    .hero-img-wrap {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 380px;
+    }
+    .hero-img-bg {
+      position: absolute;
+      width: 82%;
+      height: 82%;
+      background: var(--gold-pale);
+      border-radius: 50%;
+      z-index: 0;
+    }
+    .hero-img-wrap .img-placeholder {
+      position: relative;
+      z-index: 1;
+      max-width: 420px;
+      min-height: 320px;
+      filter: drop-shadow(0 20px 40px rgba(29,45,80,0.12));
+    }
+    .hero-protein-tag {
+      position: absolute;
+      bottom: 8%;
+      right: 4%;
+      z-index: 2;
+      background: var(--white);
+      border: 1px solid var(--gold-pale);
+      border-radius: 12px;
+      padding: 8px 16px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--blue-dark);
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .hero-protein-tag span { font-size: 10px; font-weight: 500; color: var(--gold); margin-top: 1px; }
+
+    /* ── SECTIONS ── */
+    section { padding: 80px 24px; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+
+    .section-label {
+      display: block;
+      text-align: center;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(26px, 4vw, 42px);
+      font-weight: 700;
+      margin-bottom: 6px;
+      text-align: center;
+      color: var(--blue-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      line-height: 1.15;
+    }
+    .section-title em {
+      font-style: italic;
+      color: var(--gold);
+      text-transform: none;
+      letter-spacing: 0;
+    }
+    .section-script {
+      display: block;
+      text-align: center;
+      font-family: 'Dancing Script', cursive;
+      font-size: clamp(18px, 2.5vw, 24px);
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .section-sub {
+      text-align: center;
+      color: var(--soft);
+      font-size: 14.5px;
+      margin-bottom: 48px;
+    }
+
+    /* ── HOW IT WORKS ── */
+    #how { background: var(--white); }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .step {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px 28px 32px;
+      position: relative;
+      overflow: hidden;
+      transition: transform .25s, box-shadow .25s;
+      text-align: center;
+    }
+    .step:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+    .step-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 80px;
+      font-weight: 700;
+      color: var(--gold-pale);
+      line-height: 1;
+      position: absolute;
+      top: 8px;
+      right: 16px;
+      user-select: none;
+    }
+    .step-icon {
+      width: 58px;
+      height: 58px;
+      border: 1.5px solid var(--blue);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin: 0 auto 18px;
+      background: transparent;
+      position: relative;
+    }
+    .step h3 {
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--blue-dark);
+      position: relative;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+    .step p { font-size: 14px; color: var(--mid); line-height: 1.7; position: relative; }
+
+    /* ── MENU ── */
+    #menu { background: var(--cream); }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-bottom: 28px;
+    }
+    .menu-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--blue);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+      box-shadow: var(--shadow);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .menu-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .menu-card-title {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .09em;
+      color: var(--blue-dark);
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--blue-pale);
+    }
+    .menu-card ul { list-style: none; }
+    .menu-card ul li {
+      font-size: 14px;
+      color: var(--mid);
+      padding: 7px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .menu-card ul li:last-child { border-bottom: none; }
+    .menu-card ul li::before { content: '·'; color: var(--blue); font-weight: 700; font-size: 20px; line-height: 0; }
+    .menu-extras {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .menu-extra-tag {
+      background: var(--blue-pale);
+      color: var(--blue-dark);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 7px 18px;
+      border-radius: 20px;
+      border: 1px solid var(--blue-light);
+    }
+    .menu-note {
+      text-align: center;
+      font-size: 13px;
+      color: var(--soft);
+      margin-top: 14px;
+    }
+
+    /* ── BUILDER ── */
+    #builder { background: var(--cream); }
+    .builder-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    /* Left pill card */
+    .builder-pills-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 36px 32px;
+      box-shadow: var(--shadow-lg);
+    }
+    .builder-category { margin-bottom: 28px; }
+    .builder-category:last-child { margin-bottom: 0; }
+    .builder-category-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--dark);
+      margin-bottom: 14px;
+    }
+    .builder-category-label::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      background: var(--gold);
+    }
+    .pill-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .pill {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 50px;
+      padding: 10px 22px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--dark);
+      cursor: pointer;
+      transition: border-color .18s, background .18s, color .18s, transform .15s;
+      font-family: 'DM Sans', sans-serif;
+      white-space: nowrap;
+      line-height: 1;
+    }
+    .pill:hover:not(.pill-selected) {
+      border-color: var(--blue-light);
+      background: var(--blue-ultra);
+      color: var(--blue-dark);
+      transform: translateY(-1px);
+    }
+    .pill.pill-selected {
+      background: var(--blue-deep);
+      border-color: var(--blue-deep);
+      color: #fff;
+      font-weight: 600;
+    }
+    [data-category="extra"] .pill.pill-selected {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: #fff;
+    }
+
+    /* Right preview card */
+    .builder-preview-card {
+      background: var(--blue-deep);
+      border-radius: 20px;
+      padding: 40px 36px;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      position: sticky;
+      top: 80px;
+    }
+    .preview-card-eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+      opacity: 0.9;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .preview-plan-badge {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      background: rgba(201,169,110,0.22);
+      color: var(--gold-light);
+      padding: 2px 9px;
+      border-radius: 8px;
+      text-transform: uppercase;
+    }
+    .preview-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(30px, 3vw, 42px);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 32px;
+      line-height: 1.1;
+    }
+    .preview-card-rows { display: flex; flex-direction: column; margin-bottom: 32px; }
+    .preview-card-row {
+      display: flex;
+      align-items: baseline;
+      gap: 20px;
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .preview-card-row:last-child { border-bottom: none; }
+    .preview-card-key {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--gold);
+      min-width: 72px;
+      flex-shrink: 0;
+      padding-top: 3px;
+    }
+    .preview-card-val {
+      font-size: 17px;
+      font-weight: 500;
+      color: #fff;
+      line-height: 1.3;
+    }
+    .preview-card-val.empty {
+      color: rgba(255,255,255,0.25);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 15px;
+    }
+    .btn-wa-pill {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      background: var(--gold);
+      color: var(--blue-deep);
+      border: none;
+      padding: 17px 24px;
+      border-radius: 50px;
+      font-size: 12.5px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background .2s, transform .15s, box-shadow .2s;
+      font-family: 'DM Sans', sans-serif;
+      box-shadow: 0 6px 24px rgba(201,169,110,0.35);
+    }
+    .btn-wa-pill:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 10px 32px rgba(201,169,110,0.45); }
+    .builder-note { text-align: center; font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 14px; }
+
+    /* ── PLAN SELECTOR ── */
+    .plan-selector {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .plan-btn {
+      border: 2px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 16px;
+      background: var(--white);
+      cursor: pointer;
+      text-align: left;
+      font-family: 'DM Sans', sans-serif;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      transition: border-color .2s, background .2s, transform .15s;
+    }
+    .plan-btn:hover:not(.plan-selected) {
+      border-color: var(--blue-light);
+      background: var(--blue-ultra);
+      transform: translateY(-2px);
+    }
+    .plan-btn.plan-selected {
+      border-color: var(--blue-dark);
+      background: var(--blue-pale);
+    }
+    .plan-btn-name {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--blue-dark);
+    }
+    .plan-btn-desc {
+      font-size: 11.5px;
+      color: var(--soft);
+      line-height: 1.55;
+    }
+    .plan-check {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 22px;
+      height: 22px;
+      background: var(--blue-dark);
+      border-radius: 50%;
+      color: #fff;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity .2s;
+    }
+    .plan-btn.plan-selected .plan-check { opacity: 1; }
+
+    /* Disabled pills */
+    .pill.pill-disabled {
+      opacity: 0.22;
+      pointer-events: none;
+    }
+    /* No plan selected — all pills dimmed */
+    .builder-pills-card.no-plan .pill {
+      opacity: 0.45;
+      pointer-events: none;
+    }
+
+    /* Selection counter */
+    .builder-category-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .sel-counter {
+      display: none;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--blue);
+      background: var(--blue-pale);
+      padding: 2px 9px;
+      border-radius: 12px;
+      margin-left: auto;
+    }
+    .sel-counter.full { color: var(--gold); background: var(--gold-pale); }
+
+    /* Extras sub-group labels (Snacks / Desserts / Other) */
+    .extra-sublabel {
+      width: 100%;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      padding-top: 10px;
+      margin-top: 2px;
+    }
+    .extra-sublabel:first-child { padding-top: 0; margin-top: 0; }
+
+    /* Locked extras for Basic */
+    .builder-category.category-locked {
+      opacity: 0.28;
+      pointer-events: none;
+    }
+
+    @media (max-width: 600px) { .plan-selector { grid-template-columns: 1fr; } }
+
+    /* ── GOALS SECTION ── */
+    .goals-section {
+      display: none;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--blue);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      margin-bottom: 28px;
+    }
+    .goals-section.visible {
+      display: block;
+      animation: slideDown .25s ease;
+    }
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .goals-block { margin-bottom: 24px; }
+    .goals-block:last-child { margin-bottom: 0; }
+    .goals-block-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--blue-dark);
+      margin-bottom: 12px;
+    }
+    .goals-pills, .activity-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .goals-pills .pill.pill-selected,
+    .activity-pills .pill.pill-selected {
+      background: var(--blue-dark);
+      border-color: var(--blue-dark);
+    }
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .metric-field { display: flex; flex-direction: column; gap: 6px; }
+    .metric-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--soft);
+    }
+    .metric-input-wrap { position: relative; }
+    .metric-input {
+      width: 100%;
+      padding: 11px 44px 11px 14px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 15px;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--dark);
+      background: var(--cream);
+      transition: border-color .2s, box-shadow .2s;
+      appearance: textfield;
+      -moz-appearance: textfield;
+    }
+    .metric-input::-webkit-outer-spin-button,
+    .metric-input::-webkit-inner-spin-button { -webkit-appearance: none; }
+    .metric-input:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(93,130,168,.12); }
+    .metric-unit {
+      position: absolute;
+      right: 13px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--soft);
+      pointer-events: none;
+    }
+    @media (max-width: 600px) { .metrics-grid { grid-template-columns: 1fr 1fr; } }
+
+    /* ── GALLERY ── */
+    #gallery { background: var(--cream); }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .gallery-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform .25s, box-shadow .25s;
+    }
+    .gallery-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+    .gallery-card-body { padding: 16px 18px; }
+    .gallery-card-body h3 { font-size: 15px; font-weight: 700; margin-bottom: 4px; color: var(--blue-dark); }
+    .gallery-card-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+    .gallery-tag {
+      background: var(--blue-pale);
+      color: var(--blue-dark);
+      font-size: 11.5px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 12px;
+      border: 1px solid var(--blue-light);
+    }
+
+    /* ── CTA ── */
+    #contact {
+      background: var(--blue-deep);
+      text-align: center;
+      color: #fff;
+      padding: 90px 24px;
+    }
+    #contact .section-label { color: rgba(201,169,110,0.7); }
+    #contact .section-title { color: #fff; }
+    #contact .section-title em { color: var(--gold); }
+    #contact .brand-divider::before,
+    #contact .brand-divider::after { background: linear-gradient(to right, transparent, rgba(201,169,110,0.45)); }
+    #contact .brand-divider::after { background: linear-gradient(to left, transparent, rgba(201,169,110,0.45)); }
+    #contact .brand-divider-heart { color: var(--gold-light); }
+    #contact .section-script { color: var(--gold-light); }
+    #contact > .section-inner > p { color: rgba(255,255,255,0.72); font-size: 15px; margin-bottom: 36px; }
+    .contact-grid {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 36px;
+    }
+    .contact-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(201,169,110,0.3);
+      border-radius: var(--radius);
+      padding: 22px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      color: #fff;
+      transition: background .2s, transform .15s, border-color .2s;
+      min-width: 160px;
+    }
+    .contact-card:hover { background: rgba(201,169,110,0.14); transform: translateY(-3px); border-color: rgba(201,169,110,0.6); }
+    .contact-card-label { font-size: 10px; text-transform: uppercase; letter-spacing: .1em; opacity: .6; }
+    .contact-card-val { font-size: 15px; font-weight: 700; }
+    .contact-card-icon { font-size: 22px; margin-bottom: 2px; }
+    .btn-order-big {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--gold);
+      color: var(--blue-dark);
+      text-decoration: none;
+      padding: 16px 36px;
+      border-radius: 14px;
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+      transition: transform .15s, box-shadow .2s, background .2s;
+    }
+    .btn-order-big:hover { transform: translateY(-3px); box-shadow: 0 14px 44px rgba(0,0,0,0.24); background: var(--gold-light); }
+
+    /* ── FAQ ── */
+    #faq { background: var(--white); }
+    .faq-list { max-width: 680px; margin: 0 auto; }
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+    .faq-q {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      padding: 18px 20px;
+      font-size: 15px;
+      font-weight: 600;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--blue-dark);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      transition: background .2s;
+    }
+    .faq-q:hover { background: var(--blue-ultra); }
+    .faq-q .faq-arrow {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      border: 1.5px solid var(--blue);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform .3s;
+      font-size: 11px;
+      color: var(--blue);
+    }
+    .faq-item.open .faq-q { background: var(--blue-ultra); }
+    .faq-item.open .faq-arrow { transform: rotate(180deg); background: var(--blue-pale); }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .35s ease, padding .3s;
+      font-size: 14px;
+      color: var(--mid);
+      line-height: 1.75;
+      padding: 0 20px;
+    }
+    .faq-item.open .faq-a { max-height: 300px; padding: 0 20px 20px; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--blue-deep);
+      color: rgba(255,255,255,0.6);
+      padding: 44px 24px 32px;
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba(201,169,110,0.2);
+    }
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .footer-logo-text strong { font-size: 14px; display: block; color: #fff; font-weight: 700; }
+    .footer-logo-text span { font-size: 10px; color: var(--gold); opacity: .85; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; }
+    .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+    .footer-links a {
+      text-decoration: none;
+      color: rgba(255,255,255,0.5);
+      font-size: 13px;
+      transition: color .2s;
+    }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-copy {
+      max-width: 1100px;
+      margin: 20px auto 0;
+      font-size: 12px;
+      opacity: .4;
+      text-align: center;
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--cream);
+        border-bottom: 1px solid var(--border);
+        padding: 12px 24px 20px;
+        z-index: 99;
+      }
+      #top { grid-template-columns: 1fr; padding: 48px 24px 40px; gap: 32px; }
+      .hero-img-wrap { order: -1; min-height: 280px; }
+      .steps { grid-template-columns: 1fr; }
+      .menu-grid { grid-template-columns: 1fr 1fr; }
+      .builder-wrap { grid-template-columns: 1fr; }
+      .builder-pills-card { padding: 28px 20px; }
+      .builder-preview-card { padding: 28px 24px; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .menu-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .contact-grid { flex-direction: column; align-items: center; }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+  </style>
+</head>
+<body id="top-anchor">
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#top-anchor" class="nav-logo">
+        <img src="assets/logo.jpeg" alt="Crave Balance logo" class="logo-img" />
+        <div class="nav-logo-text">
+          <strong>Crave Balance</strong>
+          <span>By Mels</span>
+        </div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#how"     data-i18n="nav-how">Cómo funciona</a></li>
+        <li><a href="#menu"    data-i18n="nav-menu">Menú</a></li>
+        <li><a href="#builder" data-i18n="nav-builder">Arma tu combo</a></li>
+        <li><a href="#gallery" data-i18n="nav-gallery">Galería</a></li>
+        <li><a href="#faq"     data-i18n="nav-faq">Preguntas</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="lang-toggle">
+          <button id="btn-lang-es" class="active" onclick="setLang('es')">ES</button>
+          <button id="btn-lang-en"                onclick="setLang('en')">EN</button>
+        </div>
+        <button class="btn-nav" onclick="openWA('general')" data-i18n="nav-order">Ordenar</button>
+        <button class="hamburger" id="hamburger" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div id="top">
+    <div class="hero-content">
+      <div class="hero-badge" data-i18n="hero-badge">Miami · Preps semanales</div>
+      <h1 class="hero-title" data-i18n-html="hero-title">Comidas <em>balanceadas</em>.<br/>Ingredientes reales.<br/>Resultados reales.</h1>
+      <span class="hero-script" data-i18n="hero-script">Disfruta el proceso ♡</span>
+      <p class="hero-sub" data-i18n="hero-sub">Meal prep alto en proteína, preparado con ingredientes frescos y entregado a tu puerta cada semana en Miami. Hecho para acompañar tus metas — sin complicarte.</p>
+      <div class="hero-ctas">
+        <button class="btn-primary" onclick="openWA('general')">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          <span data-i18n="hero-cta1">Ordenar por WhatsApp</span>
+        </button>
+        <a href="#menu" class="btn-secondary" data-i18n="hero-cta2">Ver el menú</a>
+      </div>
+      <div class="hero-chips">
+        <div class="chip" data-i18n-html="chip-delivery"><strong>Entrega en Miami</strong> cada semana</div>
+        <div class="chip" data-i18n-html="chip-macros"><strong>Calorías y macros</strong> incluidos</div>
+      </div>
+    </div>
+    <div class="hero-img-wrap">
+      <div class="hero-img-bg"></div>
+      <div class="img-placeholder" style="min-height:320px;">
+        <div class="img-placeholder-icon">🍱</div>
+        <div class="img-placeholder-label" data-i18n="img-soon">Imagen próximamente</div>
+      </div>
+      <div class="hero-protein-tag">
+        <span data-i18n="hero-prot-tag">Alta en proteína</span>
+        <span data-i18n="hero-prot-sub">Cada comida</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <section id="how">
+    <div class="section-inner">
+      <span class="section-label" data-i18n="how-label">El proceso</span>
+      <h2 class="section-title" data-i18n-html="how-title">Cómo <em>funciona</em></h2>
+      <div class="brand-divider"><span class="brand-divider-heart">♥</span></div>
+      <p class="section-sub" data-i18n="how-sub">Tres pasos simples para comer balanceado toda la semana.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-icon">📋</div>
+          <h3 data-i18n="step1-title">Elige tu plan</h3>
+          <p data-i18n="step1-text">Basic, Plus o Premium — según qué tanto quieras personalizar tu semana.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-icon">🥗</div>
+          <h3 data-i18n="step2-title">Elige tus preferencias</h3>
+          <p data-i18n="step2-text">Proteínas · Carbohidratos · Vegetales · Extras a tu gusto cada semana.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-icon">🚚</div>
+          <h3 data-i18n="step3-title">Preparamos y entregamos</h3>
+          <p data-i18n="step3-text">Comidas frescas y balanceadas, entregadas en Miami cada semana.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu">
+    <div class="section-inner">
+      <span class="section-label" data-i18n="menu-label">Menú semanal</span>
+      <h2 class="section-title" data-i18n-html="menu-title">Nuestro <em>menú base</em></h2>
+      <div class="brand-divider"><span class="brand-divider-heart">♥</span></div>
+      <p class="section-sub" data-i18n="menu-sub">Elige tu combinación cada semana. Más opciones en los planes Plus y Premium.</p>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="menu-card-title" data-i18n="cat-protein">🍗 Proteínas</div>
+          <ul>
+            <li data-i18n="menu-p1">Pechuga de pollo</li>
+            <li data-i18n="menu-p2">Pavo molido</li>
+            <li data-i18n="menu-p3">Picadillo 96/4</li>
+            <li data-i18n="menu-p4">Atún</li>
+            <li data-i18n="menu-p5">Tilapia</li>
+            <li data-i18n="menu-p6">Camarones</li>
+            <li data-i18n="menu-p7">Mahi Mahi</li>
+          </ul>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-title" data-i18n="cat-carb">🍚 Carbohidratos</div>
+          <ul>
+            <li data-i18n="menu-c1">Arroz</li>
+            <li data-i18n="menu-c2">Papa</li>
+            <li data-i18n="menu-c3">Camote</li>
+            <li data-i18n="menu-c4">Garbanzo</li>
+          </ul>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-title" data-i18n="cat-veg">🥦 Vegetales</div>
+          <ul>
+            <li data-i18n="menu-v1">Zucchini</li>
+            <li data-i18n="menu-v2">Brócoli</li>
+            <li data-i18n="menu-v3">Champiñones</li>
+            <li data-i18n="menu-v4">Ejotes</li>
+            <li data-i18n="menu-v5">Zanahoria</li>
+            <li data-i18n="menu-v6">Coles de Bruselas</li>
+            <li data-i18n="menu-v7">Espárragos</li>
+            <li data-i18n="menu-v8">Chícharos</li>
+            <li data-i18n="menu-v9">Coliflor</li>
+          </ul>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-title" data-i18n="cat-plus">✨ Plus &amp; Premium</div>
+          <ul>
+            <li data-i18n="menu-pl1">Postres proteicos</li>
+            <li data-i18n="menu-pl2">Snacks</li>
+            <li data-i18n="menu-pl3">Sides</li>
+            <li data-i18n="menu-pl4">Proteína extra</li>
+          </ul>
+        </div>
+      </div>
+      <p class="menu-note" data-i18n="menu-note">Opciones adicionales disponibles en los planes Plus y Premium.</p>
+    </div>
+  </section>
+
+  <!-- BUILDER -->
+  <section id="builder">
+    <div class="section-inner">
+      <span class="section-label" data-i18n="builder-label">Personaliza</span>
+      <h2 class="section-title" data-i18n-html="builder-title">Arma tu <em>combinación</em></h2>
+      <div class="brand-divider"><span class="brand-divider-heart">♥</span></div>
+      <p class="section-sub" data-i18n="builder-sub">Selecciona tu plan y personaliza tu combinación de la semana.</p>
+
+      <!-- Plan selector -->
+      <div class="plan-selector">
+        <button class="plan-btn" data-plan="basic" onclick="selectPlan('basic')">
+          <span class="plan-btn-name" data-i18n="plan-basic">Basic</span>
+          <span class="plan-btn-desc" data-i18n="plan-basic-desc">1 proteína · 1 carbo · 1 vegetal · Sin extras</span>
+          <span class="plan-check">✓</span>
+        </button>
+        <button class="plan-btn" data-plan="plus" onclick="selectPlan('plus')">
+          <span class="plan-btn-name" data-i18n="plan-plus">Plus</span>
+          <span class="plan-btn-desc" data-i18n="plan-plus-desc">Hasta 4 de cada categoría · Extras disponibles</span>
+          <span class="plan-check">✓</span>
+        </button>
+        <button class="plan-btn" data-plan="premium" onclick="selectPlan('premium')">
+          <span class="plan-btn-name" data-i18n="plan-premium">Premium</span>
+          <span class="plan-btn-desc" data-i18n="plan-premium-desc">Hasta 4 de cada categoría · Extras disponibles</span>
+          <span class="plan-check">✓</span>
+        </button>
+      </div>
+
+      <!-- Goals & metrics (Plus & Premium only) -->
+      <div class="goals-section" id="goals-section">
+
+        <div class="goals-block">
+          <div class="goals-block-title" data-i18n="goal-heading">🎯 ¿Cuál es tu objetivo?</div>
+          <div class="goals-pills">
+            <button class="pill" data-val="Ganar masa muscular" data-i18n="goal-muscle">Ganar masa muscular</button>
+            <button class="pill" data-val="Pérdida de grasa"    data-i18n="goal-fatloss">Pérdida de grasa</button>
+            <button class="pill" data-val="Mantener"            data-i18n="goal-maintain">Mantener</button>
+          </div>
+        </div>
+
+        <div class="goals-block">
+          <div class="goals-block-title" data-i18n="metrics-heading">📊 Tus métricas</div>
+          <div class="metrics-grid">
+            <div class="metric-field">
+              <label class="metric-label" for="metric-age" data-i18n="metric-age">Edad</label>
+              <div class="metric-input-wrap">
+                <input class="metric-input" type="number" id="metric-age" min="10" max="100" placeholder="25">
+                <span class="metric-unit" data-i18n="metric-age-unit">años</span>
+              </div>
+            </div>
+            <div class="metric-field">
+              <label class="metric-label" for="metric-height" data-i18n="metric-height">Altura</label>
+              <div class="metric-input-wrap">
+                <input class="metric-input" type="number" id="metric-height" min="100" max="250" placeholder="170">
+                <span class="metric-unit">cm</span>
+              </div>
+            </div>
+            <div class="metric-field">
+              <label class="metric-label" for="metric-weight" data-i18n="metric-weight">Peso</label>
+              <div class="metric-input-wrap">
+                <input class="metric-input" type="number" id="metric-weight" min="30" max="300" placeholder="70">
+                <span class="metric-unit">kg</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="goals-block">
+          <div class="goals-block-title" data-i18n="activity-heading">⚡ Nivel de actividad</div>
+          <div class="activity-pills">
+            <button class="pill" data-val="Bajo"  data-i18n="activity-low">Bajo</button>
+            <button class="pill" data-val="Medio" data-i18n="activity-medium">Medio</button>
+            <button class="pill" data-val="Alto"  data-i18n="activity-high">Alto</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="builder-wrap">
+
+        <div class="builder-pills-card no-plan">
+          <div class="builder-category">
+            <div class="builder-category-label">
+              <span data-i18n="bcat-protein">Proteína</span>
+              <span class="sel-counter" id="counter-protein"></span>
+            </div>
+            <div class="pill-group" data-category="protein">
+              <button class="pill" data-value="Pechuga de pollo" data-i18n="pill-chicken">Pechuga de pollo</button>
+              <button class="pill" data-value="Pavo molido"      data-i18n="pill-turkey">Pavo molido</button>
+              <button class="pill" data-value="Picadillo 96/4"   data-i18n="pill-picadillo">Picadillo 96/4</button>
+              <button class="pill" data-value="Atún"             data-i18n="pill-tuna">Atún</button>
+              <button class="pill" data-value="Cerdo magro"      data-i18n="pill-pork">Cerdo magro</button>
+              <button class="pill" data-value="Salmón"           data-i18n="pill-salmon">Salmón</button>
+              <button class="pill" data-value="Tilapia"          data-i18n="pill-tilapia">Tilapia</button>
+              <button class="pill" data-value="Camarones"        data-i18n="pill-shrimp">Camarones</button>
+              <button class="pill" data-value="Mahi Mahi"        data-i18n="pill-mahi">Mahi Mahi</button>
+            </div>
+          </div>
+          <div class="builder-category">
+            <div class="builder-category-label">
+              <span data-i18n="bcat-carb">Carbohidrato</span>
+              <span class="sel-counter" id="counter-carb"></span>
+            </div>
+            <div class="pill-group" data-category="carb">
+              <button class="pill" data-value="Arroz"          data-i18n="pill-rice">Arroz</button>
+              <button class="pill" data-value="Papa"           data-i18n="pill-potato">Papa</button>
+              <button class="pill" data-value="Camote"         data-i18n="pill-sweetpot">Camote</button>
+              <button class="pill" data-value="Quinoa"         data-i18n="pill-quinoa">Quinoa</button>
+              <button class="pill" data-value="Arroz integral" data-i18n="pill-brice">Arroz integral</button>
+              <button class="pill" data-value="Pasta proteica" data-i18n="pill-pasta">Pasta proteica</button>
+              <button class="pill" data-value="Garbanzo"       data-i18n="pill-chickpea">Garbanzo</button>
+            </div>
+          </div>
+          <div class="builder-category">
+            <div class="builder-category-label">
+              <span data-i18n="bcat-veg">Vegetal</span>
+              <span class="sel-counter" id="counter-veg"></span>
+            </div>
+            <div class="pill-group" data-category="veg">
+              <button class="pill" data-value="Brócoli"           data-i18n="pill-broccoli">Brócoli</button>
+              <button class="pill" data-value="Zucchini"          data-i18n="pill-zucchini">Zucchini</button>
+              <button class="pill" data-value="Ejotes"            data-i18n="pill-greenbeans">Ejotes</button>
+              <button class="pill" data-value="Champiñones"       data-i18n="pill-mushroom">Champiñones</button>
+              <button class="pill" data-value="Espárragos"        data-i18n="pill-asparagus">Espárragos</button>
+              <button class="pill" data-value="Coles de Bruselas" data-i18n="pill-brussels">Coles de Bruselas</button>
+              <button class="pill" data-value="Chícharos"         data-i18n="pill-peas">Chícharos</button>
+              <button class="pill" data-value="Coliflor"          data-i18n="pill-cauliflower">Coliflor</button>
+              <button class="pill" data-value="Zanahoria"         data-i18n="pill-carrot">Zanahoria</button>
+            </div>
+          </div>
+          <div class="builder-category" id="cat-extra">
+            <div class="builder-category-label">
+              <span data-i18n="bcat-extra">Extra (Opcional)</span>
+              <span class="sel-counter" id="counter-extra"></span>
+            </div>
+            <div class="pill-group" data-category="extra">
+
+              <div class="extra-sublabel" data-i18n="pill-snack-label">🍿 Snacks</div>
+              <button class="pill" data-value="Trufas saludables" data-i18n="pill-truffles">Trufas saludables</button>
+              <button class="pill" data-value="Waffle"            data-i18n="pill-waffle">Waffle</button>
+              <button class="pill" data-value="Muffins"           data-i18n="pill-muffins">Muffins</button>
+
+              <div class="extra-sublabel" data-i18n="pill-dessert-label">🍰 Postres</div>
+              <button class="pill" data-value="Banana Bread" data-i18n="pill-banana">Banana Bread</button>
+              <button class="pill" data-value="High Protein Vaniall Cake"     data-i18n="pill-high-protein-vanilla-cake">High Protein Vaniall Cake</button>
+              <button class="pill" data-value="Cookies"      data-i18n="pill-cookies">Cookies</button>
+
+              <div class="extra-sublabel" data-i18n="pill-other-label">➕ Otros</div>
+              <button class="pill" data-value="Side"           data-i18n="pill-side">Side</button>
+              <button class="pill" data-value="Proteína extra" data-i18n="pill-xprot">Proteína extra</button>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="builder-preview-card">
+          <div class="preview-card-eyebrow">
+            <span data-i18n="prev-eyebrow">Tu combinación</span>
+            <span class="preview-plan-badge" id="preview-plan"></span>
+          </div>
+          <div class="preview-card-title">Crave Balance</div>
+          <div class="preview-card-rows">
+            <div class="preview-card-row">
+              <span class="preview-card-key" data-i18n="prev-key-p">Proteína</span>
+              <span class="preview-card-val empty" id="prev-protein">—</span>
+            </div>
+            <div class="preview-card-row">
+              <span class="preview-card-key" data-i18n="prev-key-c">Carbo</span>
+              <span class="preview-card-val empty" id="prev-carb">—</span>
+            </div>
+            <div class="preview-card-row">
+              <span class="preview-card-key" data-i18n="prev-key-v">Vegetal</span>
+              <span class="preview-card-val empty" id="prev-veg">—</span>
+            </div>
+            <div class="preview-card-row">
+              <span class="preview-card-key" data-i18n="prev-key-e">Extra</span>
+              <span class="preview-card-val empty" id="prev-extra">—</span>
+            </div>
+          </div>
+          <button class="btn-wa-pill" onclick="sendWA()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            <span data-i18n="builder-btn">Enviar mi combo por WhatsApp</span>
+          </button>
+          <p class="builder-note" data-i18n="builder-note">Sin compromiso · Te respondemos para coordinar tu pedido</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="section-inner">
+      <span class="section-label" data-i18n="gallery-label">Combinaciones favoritas</span>
+      <h2 class="section-title" data-i18n-html="gallery-title">Lo que nuestros <em>clientes eligen</em></h2>
+      <span class="section-script" data-i18n="gallery-script">han elegido hasta ahora ♡</span>
+      <div class="brand-divider"><span class="brand-divider-heart">♥</span></div>
+      <p class="section-sub" data-i18n="gallery-sub">Algunas de las combinaciones que nuestros clientes han elegido.</p>
+      <div class="gallery-grid">
+        <div class="gallery-card">
+          <div class="gallery-img-placeholder"><span>🍱</span><small data-i18n="img-soon">Imagen próximamente</small></div>
+          <div class="gallery-card-body">
+            <h3>Cerdo magro</h3>
+            <div class="gallery-card-tags"><span class="gallery-tag">Arroz</span><span class="gallery-tag">Espárragos</span></div>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-img-placeholder"><span>🍱</span><small data-i18n="img-soon">Imagen próximamente</small></div>
+          <div class="gallery-card-body">
+            <h3>Salmón</h3>
+            <div class="gallery-card-tags"><span class="gallery-tag">Papa</span><span class="gallery-tag">Espárragos</span></div>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-img-placeholder"><span>🍱</span><small data-i18n="img-soon">Imagen próximamente</small></div>
+          <div class="gallery-card-body">
+            <h3>Picadillo 96/4</h3>
+            <div class="gallery-card-tags"><span class="gallery-tag">Ejotes</span><span class="gallery-tag">Camote</span></div>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-img-placeholder"><span>🍱</span><small data-i18n="img-soon">Imagen próximamente</small></div>
+          <div class="gallery-card-body">
+            <h3>Pollo</h3>
+            <div class="gallery-card-tags"><span class="gallery-tag">Arroz</span><span class="gallery-tag">Coles de Bruselas</span></div>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-img-placeholder"><span>🍱</span><small data-i18n="img-soon">Imagen próximamente</small></div>
+          <div class="gallery-card-body">
+            <h3>Cerdo magro</h3>
+            <div class="gallery-card-tags"><span class="gallery-tag">Quinoa</span><span class="gallery-tag">Brócoli</span></div>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <div class="gallery-img-placeholder"><span>🍱</span><small data-i18n="img-soon">Imagen próximamente</small></div>
+          <div class="gallery-card-body">
+            <h3>Picadillo 96/4</h3>
+            <div class="gallery-card-tags"><span class="gallery-tag">Papa</span><span class="gallery-tag">Zucchini</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="contact">
+    <div class="section-inner">
+      <span class="section-label" data-i18n="cta-label">Empieza hoy</span>
+      <h2 class="section-title" data-i18n-html="cta-title">¿List@ para alcanzar <em>tus metas</em>?</h2>
+      <div class="brand-divider"><span class="brand-divider-heart">♥</span></div>
+      <span class="section-script" data-i18n="cta-script">Estamos aquí para ti ♡</span>
+      <p data-i18n="cta-sub">Meal prep fresco, balanceado y listo para tus metas cada semana en Miami.</p>
+      <button class="btn-order-big" onclick="openWA('order')">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        <span data-i18n="cta-btn">Ordena tu prep semanal</span>
+      </button>
+      <div class="contact-grid">
+        <a href="#" class="contact-card" onclick="openWA('general'); return false;">
+          <div class="contact-card-icon">💬</div>
+          <div class="contact-card-label">WhatsApp</div>
+          <div class="contact-card-val">786-317-0943</div>
+        </a>
+        <a href="https://www.instagram.com/cravebalance.m/" class="contact-card" target="_blank">
+          <div class="contact-card-icon">📸</div>
+          <div class="contact-card-label">Instagram</div>
+          <div class="contact-card-val">@cravebalance.m</div>
+        </a>
+        <div class="contact-card">
+          <div class="contact-card-icon">🚚</div>
+          <div class="contact-card-label" data-i18n="cta-del-label">Entregas</div>
+          <div class="contact-card-val" data-i18n="cta-del-val">Preps semanales</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="section-inner">
+      <span class="section-label" data-i18n="faq-label">Dudas frecuentes</span>
+      <h2 class="section-title" data-i18n-html="faq-title">Preguntas <em>frecuentes</em></h2>
+      <div class="brand-divider"><span class="brand-divider-heart">♥</span></div>
+      <p class="section-sub" data-i18n="faq-sub">Todo lo que necesitas saber antes de ordenar.</p>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span data-i18n="faq1-q">¿Cómo hago mi pedido?</span>
+            <span class="faq-arrow">▾</span>
+          </button>
+          <div class="faq-a" data-i18n="faq1-a">Escríbenos por WhatsApp al 786-317-0943. Cuéntanos tu combinación favorita (proteína, carbo, vegetal y extras), coordinamos entrega y listo.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span data-i18n="faq2-q">¿Dónde hacen la entrega?</span>
+            <span class="faq-arrow">▾</span>
+          </button>
+          <div class="faq-a" data-i18n="faq2-a">Actualmente hacemos entregas en el área de Miami. Contáctanos para verificar si cubrimos tu zona.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span data-i18n="faq3-q">¿Cada cuánto puedo ordenar?</span>
+            <span class="faq-arrow">▾</span>
+          </button>
+          <div class="faq-a" data-i18n="faq3-a">Las preps son semanales. Puedes personalizar tu combo diferente cada semana según tus metas y preferencias.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span data-i18n="faq4-q">¿Las comidas incluyen macros?</span>
+            <span class="faq-arrow">▾</span>
+          </button>
+          <div class="faq-a" data-i18n="faq4-a">Sí, todas las comidas incluyen información de calorías y macronutrientes para que puedas llevar un seguimiento de tu nutrición fácilmente.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span data-i18n="faq5-q">¿Qué diferencia hay entre los planes Basic, Plus y Premium?</span>
+            <span class="faq-arrow">▾</span>
+          </button>
+          <div class="faq-a" data-i18n="faq5-a">El plan Basic incluye el menú base (proteína + carbo + vegetal). Plus y Premium añaden más opciones de personalización, postres proteicos, snacks, sides y proteína extra. Escríbenos para más detalles.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <a href="#top-anchor" class="footer-logo">
+        <img src="assets/logo.jpeg" alt="Crave Balance logo" class="logo-img-sm" />
+        <div class="footer-logo-text">
+          <strong>Crave Balance</strong>
+          <span>By Mels</span>
+        </div>
+      </a>
+      <div class="footer-links">
+        <a href="#" onclick="openWA('general'); return false;" data-i18n="footer-order">Ordenar</a>
+        <a href="#menu"  data-i18n="footer-menu">Menú</a>
+        <a href="#faq"   data-i18n="footer-faq">Preguntas</a>
+        <a href="https://www.instagram.com/cravebalance.m/" target="_blank">@cravebalance.m</a>
+      </div>
+    </div>
+    <p class="footer-copy" data-i18n="footer-copy">© Crave Balance by Mels · Miami, FL · Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // ── CONSTANTS ──────────────────────────────────────────────
+    const WA = '17863170943';
+    let currentLang = 'es';
+
+    // ── TRANSLATIONS ───────────────────────────────────────────
+    const T = {
+      es: {
+        'nav-how':'Cómo funciona','nav-menu':'Menú','nav-builder':'Arma tu combo',
+        'nav-gallery':'Galería','nav-faq':'Preguntas','nav-order':'Ordenar',
+        'hero-badge':'Miami · Preps semanales',
+        'hero-title':'Comidas <em>balanceadas</em>.<br/>Ingredientes reales.<br/>Resultados reales.',
+        'hero-script':'Disfruta el proceso ♡',
+        'hero-sub':'Meal prep alto en proteína, preparado con ingredientes frescos y entregado a tu puerta cada semana en Miami. Hecho para acompañar tus metas — sin complicarte.',
+        'hero-cta1':'Ordenar por WhatsApp','hero-cta2':'Ver el menú',
+        'chip-delivery':'<strong>Entrega en Miami</strong> cada semana',
+        'chip-macros':'<strong>Calorías y macros</strong> incluidos',
+        'hero-prot-tag':'Alta en proteína','hero-prot-sub':'Cada comida',
+        'img-soon':'Imagen próximamente',
+        'how-label':'El proceso','how-title':'Cómo <em>funciona</em>',
+        'how-sub':'Tres pasos simples para comer balanceado toda la semana.',
+        'step1-title':'Elige tu plan','step1-text':'Basic, Plus o Premium — según qué tanto quieras personalizar tu semana.',
+        'step2-title':'Elige tus preferencias','step2-text':'Proteínas · Carbohidratos · Vegetales · Extras a tu gusto cada semana.',
+        'step3-title':'Preparamos y entregamos','step3-text':'Comidas frescas y balanceadas, entregadas en Miami cada semana.',
+        'menu-label':'Menú semanal','menu-title':'Nuestro <em>menú base</em>',
+        'menu-sub':'Elige tu combinación cada semana. Más opciones en los planes Plus y Premium.',
+        'cat-protein':'🍗 Proteínas','cat-carb':'🍚 Carbohidratos','cat-veg':'🥦 Vegetales','cat-plus':'✨ Plus & Premium',
+        'menu-p1':'Pechuga de pollo','menu-p2':'Pavo molido','menu-p3':'Picadillo 96/4','menu-p4':'Atún',
+        'menu-c1':'Arroz','menu-c2':'Papa','menu-c3':'Camote',
+        'menu-v1':'Zucchini','menu-v2':'Brócoli','menu-v3':'Champiñones','menu-v4':'Ejotes','menu-v5':'Zanahoria',
+        'menu-pl1':'Postres proteicos','menu-pl2':'Snacks','menu-pl3':'Sides','menu-pl4':'Proteína extra',
+        'menu-note':'Opciones adicionales disponibles en los planes Plus y Premium.',
+        'builder-label':'Personaliza','builder-title':'Arma tu <em>combinación</em>',
+        'builder-sub':'Selecciona tu plan y personaliza tu combinación de la semana.',
+        'bcat-protein':'Proteína','bcat-carb':'Carbohidrato','bcat-veg':'Vegetal','bcat-extra':'Extra (Opcional)',
+        'prev-eyebrow':'Tu combinación','prev-key-p':'Proteína','prev-key-c':'Carbo','prev-key-v':'Vegetal','prev-key-e':'Extra',
+        'builder-btn':'Enviar mi combo por WhatsApp',
+        'builder-note':'Sin compromiso · Te respondemos para coordinar tu pedido',
+        'gallery-label':'Combinaciones favoritas','gallery-title':'Lo que nuestros <em>clientes eligen</em>',
+        'gallery-script':'han elegido hasta ahora ♡',
+        'gallery-sub':'Algunas de las combinaciones que nuestros clientes han elegido.',
+        'cta-label':'Empieza hoy','cta-title':'¿List@ para alcanzar <em>tus metas</em>?',
+        'cta-script':'Estamos aquí para ti ♡',
+        'cta-sub':'Meal prep fresco, balanceado y listo para tus metas cada semana en Miami.',
+        'cta-btn':'Ordena tu prep semanal','cta-del-label':'Entregas','cta-del-val':'Preps semanales',
+        'faq-label':'Dudas frecuentes','faq-title':'Preguntas <em>frecuentes</em>',
+        'faq-sub':'Todo lo que necesitas saber antes de ordenar.',
+        'faq1-q':'¿Cómo hago mi pedido?',
+        'faq1-a':'Escríbenos por WhatsApp al 786-317-0943. Cuéntanos tu combinación favorita (proteína, carbo, vegetal y extras), coordinamos entrega y listo.',
+        'faq2-q':'¿Dónde hacen la entrega?',
+        'faq2-a':'Actualmente hacemos entregas en el área de Miami. Contáctanos para verificar si cubrimos tu zona.',
+        'faq3-q':'¿Cada cuánto puedo ordenar?',
+        'faq3-a':'Las preps son semanales. Puedes personalizar tu combo diferente cada semana según tus metas y preferencias.',
+        'faq4-q':'¿Las comidas incluyen macros?',
+        'faq4-a':'Sí, todas las comidas incluyen información de calorías y macronutrientes para que puedas llevar un seguimiento de tu nutrición fácilmente.',
+        'faq5-q':'¿Qué diferencia hay entre los planes Basic, Plus y Premium?',
+        'faq5-a':'El plan Basic incluye el menú base (proteína + carbo + vegetal). Plus y Premium añaden más opciones de personalización, postres proteicos, snacks, sides y proteína extra. Escríbenos para más detalles.',
+        'footer-order':'Ordenar','footer-menu':'Menú','footer-faq':'Preguntas',
+        'footer-copy':'© Crave Balance by Mels · Miami, FL · Todos los derechos reservados.',
+        /* ── Pills ── */
+        'pill-chicken':'Pechuga de pollo','pill-turkey':'Pavo molido','pill-picadillo':'Picadillo 96/4',
+        'pill-tuna':'Atún','pill-pork':'Cerdo magro','pill-salmon':'Salmón',
+        'pill-tilapia':'Tilapia','pill-shrimp':'Camarones','pill-mahi':'Mahi Mahi',
+        'pill-rice':'Arroz','pill-potato':'Papa','pill-sweetpot':'Camote',
+        'pill-quinoa':'Quinoa','pill-brice':'Arroz integral','pill-pasta':'Pasta proteica','pill-chickpea':'Garbanzo',
+        'pill-broccoli':'Brócoli','pill-zucchini':'Zucchini','pill-greenbeans':'Ejotes',
+        'pill-mushroom':'Champiñones','pill-asparagus':'Espárragos','pill-brussels':'Coles de Bruselas',
+        'pill-peas':'Chícharos','pill-cauliflower':'Coliflor',
+        'pill-snack-label':'🍿 Snacks','pill-dessert-label':'🍰 Postres','pill-other-label':'➕ Otros',
+        'pill-truffles':'Trufas saludables','pill-waffle':'Waffle','pill-muffins':'Muffins',
+        'pill-banana':'Banana Bread','pill-hight-protein-vanilla-cake':'High Protein Vanilla Cake','pill-cookies':'Cookies',
+        'pill-side':'Side','pill-xprot':'Proteína extra',
+        /* ── New menu items ── */
+        'menu-p5':'Tilapia','menu-p6':'Camarones','menu-p7':'Mahi Mahi',
+        'menu-c4':'Garbanzo',
+        'menu-v6':'Coles de Bruselas','menu-v7':'Espárragos','menu-v8':'Chícharos','menu-v9':'Coliflor',
+        'pill-carrot':'Zanahoria',
+        /* ── Plan UI ── */
+        'plan-basic':'Basic','plan-plus':'Plus','plan-premium':'Premium',
+        'plan-basic-desc':'1 proteína · 1 carbo · 1 vegetal · Sin extras',
+        'plan-plus-desc':'Hasta 4 de cada categoría · Extras disponibles',
+        'plan-premium-desc':'Hasta 4 de cada categoría · Extras disponibles',
+        'choose-plan-first':'Selecciona un plan para comenzar.',
+        /* ── Goals & metrics ── */
+        'goal-heading':'🎯 ¿Cuál es tu objetivo?',
+        'goal-muscle':'Ganar masa muscular',
+        'goal-fatloss':'Pérdida de grasa',
+        'goal-maintain':'Mantener',
+        'metrics-heading':'📊 Tus métricas',
+        'metric-age':'Edad','metric-age-unit':'años',
+        'metric-height':'Altura','metric-weight':'Peso',
+        'activity-heading':'⚡ Nivel de actividad',
+        'activity-low':'Bajo','activity-medium':'Medio','activity-high':'Alto',
+      },
+      en: {
+        'nav-how':'How it works','nav-menu':'Menu','nav-builder':'Build your combo',
+        'nav-gallery':'Gallery','nav-faq':'FAQ','nav-order':'Order',
+        'hero-badge':'Miami · Weekly Preps',
+        'hero-title':'<em>Balanced</em> meals.<br/>Real ingredients.<br/>Real results.',
+        'hero-script':'Enjoy the process ♡',
+        'hero-sub':'High-protein meal prep, made with fresh ingredients and delivered to your door every week in Miami. Built around your goals — no hassle.',
+        'hero-cta1':'Order via WhatsApp','hero-cta2':'See the menu',
+        'chip-delivery':'<strong>Miami delivery</strong> every week',
+        'chip-macros':'<strong>Calories & macros</strong> included',
+        'hero-prot-tag':'High protein','hero-prot-sub':'Every meal',
+        'img-soon':'Image coming soon',
+        'how-label':'The process','how-title':'How it <em>works</em>',
+        'how-sub':'Three simple steps to eat balanced all week long.',
+        'step1-title':'Choose your plan','step1-text':'Basic, Plus or Premium — depending on how much you want to customize your week.',
+        'step2-title':'Choose your preferences','step2-text':'Proteins · Carbs · Vegetables · Extras to your taste every week.',
+        'step3-title':'We prepare & deliver','step3-text':'Fresh, balanced meals delivered in Miami every week.',
+        'menu-label':'Weekly menu','menu-title':'Our <em>base menu</em>',
+        'menu-sub':'Choose your combination each week. More options with Plus and Premium plans.',
+        'cat-protein':'🍗 Proteins','cat-carb':'🍚 Carbohydrates','cat-veg':'🥦 Vegetables','cat-plus':'✨ Plus & Premium',
+        'menu-p1':'Chicken breast','menu-p2':'Ground turkey','menu-p3':'Lean ground beef 96/4','menu-p4':'Tuna',
+        'menu-c1':'Rice','menu-c2':'Potato','menu-c3':'Sweet potato',
+        'menu-v1':'Zucchini','menu-v2':'Broccoli','menu-v3':'Mushrooms','menu-v4':'Green beans','menu-v5':'Carrots',
+        'menu-pl1':'Protein desserts','menu-pl2':'Snacks','menu-pl3':'Sides','menu-pl4':'Extra protein',
+        'menu-note':'Additional options available with Plus and Premium plans.',
+        'builder-label':'Personalize','builder-title':'Build your <em>combo</em>',
+        'builder-sub':'Select your plan and customize your weekly combination.',
+        'bcat-protein':'Protein','bcat-carb':'Carbohydrate','bcat-veg':'Vegetable','bcat-extra':'Extra (Optional)',
+        'prev-eyebrow':'Your combo','prev-key-p':'Protein','prev-key-c':'Carb','prev-key-v':'Veggie','prev-key-e':'Extra',
+        'builder-btn':'Send my combo via WhatsApp',
+        'builder-note':"No commitment · We'll get back to you to coordinate",
+        'gallery-label':'Customer favorites','gallery-title':'What our <em>customers choose</em>',
+        'gallery-script':'have chosen so far ♡',
+        'gallery-sub':'Some of the combinations our customers love.',
+        'cta-label':'Start today','cta-title':'Ready to reach <em>your goals</em>?',
+        'cta-script':"We're here for you ♡",
+        'cta-sub':'Fresh, balanced meal prep ready for your goals every week in Miami.',
+        'cta-btn':'Order your weekly prep','cta-del-label':'Deliveries','cta-del-val':'Weekly preps',
+        'faq-label':'Common questions','faq-title':'<em>Frequently</em> asked questions',
+        'faq-sub':'Everything you need to know before ordering.',
+        'faq1-q':'How do I place an order?',
+        'faq1-a':"Send us a message on WhatsApp at 786-317-0943. Tell us your favorite combination (protein, carb, vegetable and extras), we'll coordinate delivery and you're set.",
+        'faq2-q':'Where do you deliver?',
+        'faq2-a':'We currently deliver in the Miami area. Contact us to confirm whether we cover your zone.',
+        'faq3-q':'How often can I order?',
+        'faq3-a':'Preps are weekly. You can customize your combo differently each week based on your goals and preferences.',
+        'faq4-q':'Do the meals include macro info?',
+        'faq4-a':'Yes, all meals include calorie and macronutrient information so you can easily track your nutrition.',
+        'faq5-q':"What's the difference between Basic, Plus and Premium plans?",
+        'faq5-a':'The Basic plan includes the base menu (protein + carb + vegetable). Plus and Premium add more customization options, protein desserts, snacks, sides and extra protein. Message us for details.',
+        'footer-order':'Order','footer-menu':'Menu','footer-faq':'FAQ',
+        'footer-copy':'© Crave Balance by Mels · Miami, FL · All rights reserved.',
+        /* ── Pills ── */
+        'pill-chicken':'Chicken breast','pill-turkey':'Ground turkey','pill-picadillo':'Lean ground beef 96/4',
+        'pill-tuna':'Tuna','pill-pork':'Lean pork','pill-salmon':'Salmon',
+        'pill-tilapia':'Tilapia','pill-shrimp':'Shrimp','pill-mahi':'Mahi Mahi',
+        'pill-rice':'Rice','pill-potato':'Potato','pill-sweetpot':'Sweet potato',
+        'pill-quinoa':'Quinoa','pill-brice':'Brown rice','pill-pasta':'Protein pasta','pill-chickpea':'Chickpeas',
+        'pill-broccoli':'Broccoli','pill-zucchini':'Zucchini','pill-greenbeans':'Green beans',
+        'pill-mushroom':'Mushrooms','pill-asparagus':'Asparagus','pill-brussels':'Brussels sprouts',
+        'pill-peas':'Peas','pill-cauliflower':'Cauliflower',
+        'pill-snack-label':'🍿 Snacks','pill-dessert-label':'🍰 Desserts','pill-other-label':'➕ Other',
+        'pill-truffles':'Healthy Truffles','pill-waffle':'Waffle','pill-muffins':'Muffins',
+        'pill-banana':'Banana Bread','pill-high-protein-vanilla-cake':'High Protein Vanila Cake','pill-cookies':'Cookies',
+        'pill-side':'Side','pill-xprot':'Extra protein',
+        /* ── New menu items ── */
+        'menu-p5':'Tilapia','menu-p6':'Shrimp','menu-p7':'Mahi Mahi',
+        'menu-c4':'Chickpeas',
+        'menu-v6':'Brussels sprouts','menu-v7':'Asparagus','menu-v8':'Peas','menu-v9':'Cauliflower',
+        'pill-carrot':'Carrots',
+        /* ── Plan UI ── */
+        'plan-basic':'Basic','plan-plus':'Plus','plan-premium':'Premium',
+        'plan-basic-desc':'1 protein · 1 carb · 1 vegetable · No extras',
+        'plan-plus-desc':'Up to 4 per category · Extras available',
+        'plan-premium-desc':'Up to 4 per category · Extras available',
+        'choose-plan-first':'Please select a plan to get started.',
+        /* ── Goals & metrics ── */
+        'goal-heading':'🎯 What is your goal?',
+        'goal-muscle':'Gain muscle mass',
+        'goal-fatloss':'Fat loss',
+        'goal-maintain':'Maintain',
+        'metrics-heading':'📊 Your metrics',
+        'metric-age':'Age','metric-age-unit':'yrs',
+        'metric-height':'Height','metric-weight':'Weight',
+        'activity-heading':'⚡ Activity level',
+        'activity-low':'Low','activity-medium':'Medium','activity-high':'High',
+      }
+    };
+
+    // ── WHATSAPP MESSAGES ──────────────────────────────────────
+    const WA_MSG = {
+      general: {
+        es: 'Hola Crave Balance! 👋 Quisiera hacer un pedido y obtener más información sobre sus planes.',
+        en: "Hello Crave Balance! 👋 I'd like to place an order and get more information about your plans."
+      },
+      order: {
+        es: 'Hola Crave Balance! 🍱 Quiero ordenar mi prep semanal. ¿Qué necesito para empezar?',
+        en: "Hello Crave Balance! 🍱 I want to order my weekly prep. What do I need to get started?"
+      }
+    };
+
+    // ── LANGUAGE SWITCH ────────────────────────────────────────
+    function setLang(lang) {
+      currentLang = lang;
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const v = T[lang][el.dataset.i18n];
+        if (v !== undefined) el.textContent = v;
+      });
+      document.querySelectorAll('[data-i18n-html]').forEach(el => {
+        const v = T[lang][el.dataset.i18nHtml];
+        if (v !== undefined) el.innerHTML = v;
+      });
+      document.getElementById('btn-lang-es').classList.toggle('active', lang === 'es');
+      document.getElementById('btn-lang-en').classList.toggle('active', lang === 'en');
+    }
+
+    // ── WHATSAPP OPENERS ───────────────────────────────────────
+    function openWA(type) {
+      const msg = (WA_MSG[type] || WA_MSG.general)[currentLang];
+      window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(msg), '_blank');
+    }
+
+    // ── HAMBURGER ──────────────────────────────────────────────
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(a =>
+      a.addEventListener('click', () => navLinks.classList.remove('open'))
+    );
+
+    // ── BUILDER (plan-aware pill selection) ──────────────────────
+    const PLAN = {
+      basic: {
+        protein:  ['Pechuga de pollo', 'Pavo molido', 'Picadillo 96/4', 'Atún'],
+        carb:     ['Arroz', 'Camote', 'Papa'],
+        veg:      ['Zucchini', 'Ejotes', 'Brócoli', 'Zanahoria'],
+        max:      10,  // all allowed items auto-selected
+        maxExtra: 0,
+        extras:   false,
+      },
+      plus:    { protein: 'all', carb: 'all', veg: 'all', max: 4, maxExtra: 1, extras: true },
+      premium: { protein: 'all', carb: 'all', veg: 'all', max: 4, maxExtra: 2, extras: true },
+    };
+
+    // Returns the effective max for a category, adding +1 protein when Extra Protein is selected
+    function effectiveMax(cat) {
+      if (!currentPlan) return 0;
+      if (cat === 'extra') return PLAN[currentPlan].maxExtra;
+      const bonus = (cat === 'protein' && sel.extra.includes('Proteína extra')) ? 1 : 0;
+      return PLAN[currentPlan].max + bonus;
+    }
+
+    let currentPlan = null;
+    const goalState = { goal: '', activity: '' };
+    const sel    = { protein: [], carb: [], veg: [], extra: [] };
+    const prevId = { protein: 'prev-protein', carb: 'prev-carb', veg: 'prev-veg', extra: 'prev-extra' };
+
+    function refreshPreview(cat) {
+      const el = document.getElementById(prevId[cat]);
+      if (sel[cat].length) {
+        el.textContent = sel[cat].join(', ');
+        el.classList.remove('empty');
+        el.style.fontSize = sel[cat].length > 2 ? '13px' : '';
+      } else {
+        el.textContent = '—';
+        el.classList.add('empty');
+        el.style.fontSize = '';
+      }
+    }
+
+    function refreshCounter(cat) {
+      const c = document.getElementById('counter-' + cat);
+      if (!c || !currentPlan) { if (c) c.style.display = 'none'; return; }
+      const max  = effectiveMax(cat);
+      const show = max > 1;  // only display counter when multi-select (hides for Plus extras = 1)
+      c.style.display = show ? 'inline' : 'none';
+      if (show) {
+        const n = sel[cat].length;
+        c.textContent = n + '/' + max;
+        c.classList.toggle('full', n >= max);
+      }
+    }
+
+    function selectPlan(plan) {
+      currentPlan = plan;
+      const cfg   = PLAN[plan];
+
+      document.querySelectorAll('.plan-btn').forEach(b =>
+        b.classList.toggle('plan-selected', b.dataset.plan === plan)
+      );
+
+      Object.keys(sel).forEach(k => sel[k] = []);
+      document.querySelectorAll('.pill').forEach(p => p.classList.remove('pill-selected'));
+
+      ['protein', 'carb', 'veg'].forEach(cat => {
+        const allowed = cfg[cat];
+        document.querySelectorAll(`.pill-group[data-category="${cat}"] .pill`).forEach(pill => {
+          pill.classList.toggle('pill-disabled', allowed !== 'all' && !allowed.includes(pill.dataset.value));
+        });
+        refreshPreview(cat);
+        refreshCounter(cat);
+      });
+
+      const extraCat = document.getElementById('cat-extra');
+      extraCat.classList.toggle('category-locked', !cfg.extras);
+      if (!cfg.extras) {
+        sel.extra = [];
+        document.querySelectorAll('.pill-group[data-category="extra"] .pill')
+          .forEach(p => p.classList.remove('pill-selected'));
+        refreshPreview('extra');
+      }
+      refreshCounter('extra');
+
+      // Auto-select every allowed item when Basic is chosen
+      if (plan === 'basic') {
+        ['protein', 'carb', 'veg'].forEach(cat => {
+          const allowed = cfg[cat];
+          document.querySelectorAll(`.pill-group[data-category="${cat}"] .pill`).forEach(pill => {
+            if (allowed.includes(pill.dataset.value)) {
+              pill.classList.add('pill-selected');
+              sel[cat].push(pill.dataset.value);
+            }
+          });
+          refreshPreview(cat);
+          refreshCounter(cat);
+        });
+      }
+
+      // Show goals section only for Plus / Premium
+      const goalsSection = document.getElementById('goals-section');
+      if (goalsSection) goalsSection.classList.toggle('visible', plan !== 'basic');
+
+      const badge = document.getElementById('preview-plan');
+      if (badge) badge.textContent = plan.charAt(0).toUpperCase() + plan.slice(1);
+      document.querySelector('.builder-pills-card').classList.remove('no-plan');
+    }
+
+    // Goal & activity single-select pills
+    document.querySelectorAll('.goals-pills .pill, .activity-pills .pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        const parent = pill.parentElement;
+        parent.querySelectorAll('.pill').forEach(p => p.classList.remove('pill-selected'));
+        pill.classList.add('pill-selected');
+        if (parent.classList.contains('goals-pills'))    goalState.goal     = pill.dataset.val;
+        if (parent.classList.contains('activity-pills')) goalState.activity = pill.dataset.val;
+      });
+    });
+
+    document.querySelectorAll('.pill-group').forEach(group => {
+      const cat = group.dataset.category;
+      group.querySelectorAll('.pill').forEach(pill => {
+        pill.addEventListener('click', () => {
+          if (!currentPlan) {
+            alert(T[currentLang]['choose-plan-first'] || 'Selecciona un plan primero.');
+            return;
+          }
+          const val  = pill.dataset.value;
+          const isOn = pill.classList.contains('pill-selected');
+
+          if (isOn) {
+            // ── Deselect ──
+            pill.classList.remove('pill-selected');
+            sel[cat] = sel[cat].filter(v => v !== val);
+
+            // Extra Protein removed → trim protein list to new (lower) max
+            if (cat === 'extra' && val === 'Proteína extra') {
+              const newMax = effectiveMax('protein');
+              while (sel.protein.length > newMax) {
+                const dropped = sel.protein.pop();
+                document.querySelector(`.pill-group[data-category="protein"] .pill[data-value="${dropped}"]`)
+                  ?.classList.remove('pill-selected');
+              }
+              refreshPreview('protein');
+              refreshCounter('protein');
+            }
+          } else {
+            // ── Select ──
+            const max = effectiveMax(cat);
+            if (sel[cat].length >= max) {
+              if (max <= 1) {
+                // Single-select: swap out previous
+                group.querySelectorAll('.pill.pill-selected').forEach(p => p.classList.remove('pill-selected'));
+                sel[cat] = [];
+              } else {
+                return; // Multi-select cap reached
+              }
+            }
+            pill.classList.add('pill-selected');
+            sel[cat].push(val);
+
+            // Extra Protein added → protein counter now shows +1 slot
+            if (cat === 'extra' && val === 'Proteína extra') {
+              refreshCounter('protein');
+            }
+          }
+
+          refreshPreview(cat);
+          refreshCounter(cat);
+        });
+      });
+    });
+
+    function sendWA() {
+      if (!currentPlan) { alert(T[currentLang]['choose-plan-first']); return; }
+      const { protein, carb, veg, extra } = sel;
+      if (!protein.length || !carb.length || !veg.length) {
+        alert(currentLang === 'es'
+          ? 'Por favor elige al menos una proteína, un carbo y un vegetal.'
+          : 'Please select at least one protein, one carb and one vegetable.');
+        return;
+      }
+      const planLabel = { basic: 'Básico', plus: 'Plus', premium: 'Premium' };
+      let msg = 'Hola Crave Balance! Quiero ordenar mi plan ' + planLabel[currentPlan] + ':\n'
+              + '🍗 Proteínas: ' + protein.join(', ') + '\n'
+              + '🍚 Carbos: '    + carb.join(', ')    + '\n'
+              + '🥦 Vegetales: ' + veg.join(', ');
+      if (extra.length) msg += '\n✨ Extras: ' + extra.join(', ');
+
+      // Append goals & metrics for Plus / Premium
+      if (currentPlan !== 'basic') {
+        const age    = document.getElementById('metric-age')?.value;
+        const height = document.getElementById('metric-height')?.value;
+        const weight = document.getElementById('metric-weight')?.value;
+        const hasProfile = goalState.goal || age || height || weight || goalState.activity;
+        if (hasProfile) {
+          msg += '\n\n📋 Perfil:';
+          if (goalState.goal) msg += '\n🎯 Objetivo: ' + goalState.goal;
+          const parts = [];
+          if (age)    parts.push(age    + ' años');
+          if (height) parts.push(height + ' cm');
+          if (weight) parts.push(weight + ' kg');
+          if (parts.length) msg += '\n📊 Métricas: ' + parts.join(' · ');
+          if (goalState.activity) msg += '\n⚡ Actividad: ' + goalState.activity;
+        }
+      }
+
+      window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(msg), '_blank');
+    }
+
+    // ── FAQ ────────────────────────────────────────────────────
+    function toggleFaq(btn) {
+      const item   = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+  </script>
+</body>
+</html>
