@@ -121,6 +121,13 @@
       align-items: center;
       justify-content: center;
       gap: 6px;
+      overflow: hidden;
+    }
+    .gallery-img-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
     .gallery-img-placeholder span { font-size: 30px; }
     .gallery-img-placeholder small {
@@ -350,6 +357,15 @@
       min-height: 320px;
       filter: drop-shadow(0 20px 40px rgba(29,45,80,0.12));
     }
+    .hero-main-img {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 420px;
+      border-radius: 20px;
+      object-fit: cover;
+      filter: drop-shadow(0 20px 40px rgba(29,45,80,0.12));
+    }
     .hero-protein-tag {
       position: absolute;
       bottom: 8%;
@@ -434,6 +450,7 @@
       text-align: center;
     }
     .step:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+    .step-link { cursor: pointer; }
     .step-num {
       font-family: 'Playfair Display', serif;
       font-size: 80px;
@@ -1161,10 +1178,7 @@
     </div>
     <div class="hero-img-wrap">
       <div class="hero-img-bg"></div>
-      <div class="img-placeholder" style="min-height:320px;">
-        <div class="img-placeholder-icon">🍱</div>
-        <div class="img-placeholder-label" data-i18n="img-soon">Imagen próximamente</div>
-      </div>
+      <img src="assets/Imagen Pricipal.jpeg" alt="Crave Balance meal prep" class="hero-main-img" />
       <div class="hero-protein-tag">
         <span data-i18n="hero-prot-tag">Alta en proteína</span>
         <span data-i18n="hero-prot-sub">Cada comida</span>
@@ -1180,19 +1194,19 @@
       <div class="brand-divider"><span class="brand-divider-heart">♥</span></div>
       <p class="section-sub" data-i18n="how-sub">Tres pasos simples para comer balanceado toda la semana.</p>
       <div class="steps">
-        <div class="step">
+        <div class="step step-link" onclick="location.href='#builder'" role="link" tabindex="0" onkeydown="if(event.key==='Enter')location.href='#builder'">
           <div class="step-num">1</div>
           <div class="step-icon">📋</div>
           <h3 data-i18n="step1-title">Elige tu plan</h3>
           <p data-i18n="step1-text">Basic, Plus o Premium — según qué tanto quieras personalizar tu semana.</p>
         </div>
-        <div class="step">
+        <div class="step step-link" onclick="location.href='#builder'" role="link" tabindex="0" onkeydown="if(event.key==='Enter')location.href='#builder'">
           <div class="step-num">2</div>
           <div class="step-icon">🥗</div>
           <h3 data-i18n="step2-title">Elige tus preferencias</h3>
           <p data-i18n="step2-text">Proteínas · Carbohidratos · Vegetales · Extras a tu gusto cada semana.</p>
         </div>
-        <div class="step">
+        <div class="step step-link" onclick="location.href='#builder'" role="link" tabindex="0" onkeydown="if(event.key==='Enter')location.href='#builder'">
           <div class="step-num">3</div>
           <div class="step-icon">🚚</div>
           <h3 data-i18n="step3-title">Preparamos y entregamos</h3>
@@ -1271,7 +1285,7 @@
       <div class="plan-selector">
         <button class="plan-btn" data-plan="basic" onclick="selectPlan('basic')">
           <span class="plan-btn-name" data-i18n="plan-basic">Basic</span>
-          <span class="plan-btn-desc" data-i18n="plan-basic-desc">1 proteína · 1 carbo · 1 vegetal · Sin extras</span>
+          <span class="plan-btn-desc" data-i18n="plan-basic-desc">4 proteína · 4 carbo · 4 vegetal · Sin extras</span>
           <span class="plan-check">✓</span>
         </button>
         <button class="plan-btn" data-plan="plus" onclick="selectPlan('plus')">
